@@ -51,6 +51,8 @@
     border: solid 3px red;
     height: 100%;
     width: 100%;
+    }
+    .firstRow{
     display: flex;
     justify-content: center;
     }
