@@ -1,53 +1,19 @@
-const heroes = [
-	{
-		name: 'Batman',
-		description: 'Description',
-		image: './src/images/dc-batman.jpg',
-	},
-	{
-		name: 'Wonder woman',
-		description: 'My Description 2',
-		image: '/src/images/dc-wonder.jpg',
-	},
-	{
-		name: 'Arrow',
-		description: 'My Description 3',
-		image: './src/images/dc-arrow.jpg',
-	},
-	{
-		name: 'DC Black',
-		description: 'My Description 2',
-		image: './src/images/dc-black.jpg',
-	},
-	{
-		name: 'DC Blue',
-		description: 'My Description 2',
-		image: './src/images/dc-blue.jpg',
-	},
-	{
-		name: 'DC Flash',
-		description: 'My Description 2',
-		image: './src/images/dc-flash.jpg',
-	},
-];
-
-// const images = [
-// 	'./src/images/dc-batman.jpg',
-// 	'./src/images/dc-wonder.jpg',
-// 	'./src/images/dc-arrow.jpg',
-// 	'./src/images/dc-black.jpg',
-
-// ];
+import { getCharacters } from './getCharacters.js';
 
 const target = document.getElementById('target');
+const template = document.querySelector('template');
 
-const init = () => {
-	const template = document.querySelector('template');
+const init = async () => {
+	const characters = await getCharacters();
 
-	heroes.forEach((hero, i) => {
+	characters.forEach((hero, i) => {
 		const clone = template.cloneNode(true).content;
 		const image = clone.querySelector('img');
+
 		image.src = hero.image;
+
+		const h5 = clone.querySelector('h5');
+		h5.innerHTML = hero.shortDescription;
 
 		const h4 = clone.querySelector('h4');
 		h4.innerHTML = hero.name;
