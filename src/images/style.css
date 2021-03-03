@@ -84,13 +84,18 @@ body {
 	padding-top: 8rem;
 }
 .buttons {
-	margin-top: 14em;
-	margin-left: 4em;
+
     display: flex;
-    margin-right: 2em;
+	border: 2px red solid;
+	width:100% ;
+	justify-content: space-between;
+	margin: auto;
+	margin-top: 19em;
 }
 .btn {
 	width: 80px;
+	
+
 }
 
 .description {
@@ -118,6 +123,8 @@ body {
 }
 .container-grid{
 margin-top: 10em;
+justify-content: center;
+display: flex;
 }
 /* .grid-container {
 	border: 1px solid red;
@@ -134,5 +141,28 @@ margin-top: 10em;
   } */
   .gridTwoCol{
 display: grid;  
-grid-template-columns: 30%;
+grid-template-columns: 30% 70%;
+/* border: red solid 2px; */
+margin-bottom: 20px;
+}
+input{
+	margin-left: 6em;
+	height: 4em;
+	width: 80%;
+	background: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 98%);
+}
+textarea{
+	margin-left: 6em;
+	width: 80%;
+	height: 6em;
+	background: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 98%);
+}
+.grid-container{
+	width: 50%;
+	font-family: 'Roboto', sans-serif;
+	background-color: white; 
+	border: 5px solid #f1f1f1;
+    border-radius: 7px;
+}
+.inpuTypeFile{
 }
