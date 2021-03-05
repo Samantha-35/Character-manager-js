@@ -47,8 +47,7 @@ body {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	border: solid 3px red;
-	width: 80%;
+	width: 50%;
 	margin: auto;
 }
 .firstRow {
@@ -150,10 +149,13 @@ body {
 	margin-bottom: 20px;
 }
 input {
-	margin-left: 6em;
+	/* margin-left: 6em; */
 	height: 4em;
 	width: 80%;
 	background: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 98%);
+}
+.inpuTypeFileModal{
+	
 }
 textarea {
 	margin-left: 6em;
@@ -200,7 +202,7 @@ input[type='password'] {
 
 /* Set a style for all buttons */
 button {
-	background-color: #4caf50;
+	background-color: dodgerblue;;
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;
@@ -228,8 +230,7 @@ button:hover {
 }
 
 img.avatar {
-	width: 40%;
-	border-radius: 50%;
+	width: 50px;
 }
 
 .container {

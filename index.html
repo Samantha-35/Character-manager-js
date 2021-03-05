@@ -32,7 +32,8 @@
                     </div>
                     <div class="buttons">
                         <!-- <button class="btn" class="buttonOne">Delete</button> -->
-                        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"class="btn buttonOne">Details</button>
+                        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"
+                            class="btn buttonOne">Details</button>
                     </div>
                 </div>
             </div>
@@ -46,19 +47,24 @@
                 <div class="imgcontainer">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close"
                         title="Close Modal">&times;</span>
-                    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                    <img src="/src/images/superhero.svg" alt="Avatar" class="avatar">
                 </div>
 
                 <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <label for="uname"><b>Name</b></label>
+                    <input type="text" placeholder="Enter a name" name="uname" required>
 
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <label for="psw"><b>Short description</b></label>
+                    <input type="password" placeholder="Enter a short description" name="psw" required>
 
-                    <button type="submit">Login</button>
+                    <label for="psw"><b>Long description</b></label>
+                    <input type="password" placeholder="Enter a longer description" name="psw" required>
+
+                    <!-- <button type="submit">btn</button> -->
+                    <div><input type="file" class="inpuTypeFileModal" id="image-input"></input></div>
+
                     <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                        <input type="checkbox" checked="checked" name="remember" class="checkbox"> Remember me
                     </label>
                 </div>
 
