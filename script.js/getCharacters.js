@@ -5,7 +5,9 @@ export const getCharacters = async () => {
 		const res = await fetch(base_url);
 		const characters = await res.json();
 
-		return characters;
+		const filteredCharacters = characters.slice(0, 4);
+
+		return filteredCharacters;
 	} catch (error) {
 		console.log(error);
 	}

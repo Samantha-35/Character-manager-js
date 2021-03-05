@@ -12,11 +12,11 @@ const init = async () => {
 
 		image.src = hero.image;
 
-		const h5 = clone.querySelector('h5');
-		h5.innerHTML = hero.shortDescription;
-
 		const h4 = clone.querySelector('h4');
 		h4.innerHTML = hero.name;
+
+		const h5 = clone.querySelector('h5');
+		h5.innerHTML = hero.shortDescription;
 
 		const pEl = clone.querySelector('p');
 		pEl.innerHTML = hero.description;
@@ -26,5 +26,3 @@ const init = async () => {
 };
 
 init();
-
-
