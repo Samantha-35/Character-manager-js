@@ -154,9 +154,9 @@ input {
 	width: 80%;
 	background: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 98%);
 }
-.inpuTypeFileModal{
-	
-}
+/* .inpuTypeFileModal{
+
+} */
 textarea {
 	margin-left: 6em;
 	width: 80%;

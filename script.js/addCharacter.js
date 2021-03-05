@@ -4,9 +4,36 @@ const inputName = document.getElementById('name');
 const inputShortDescription = document.getElementById('short-description');
 const inputLongDescription = document.getElementById('long-description');
 const inputImage = document.getElementById('image-input');
-
 const button = document.querySelector('button');
 
+let image = '';
+
+button.addEventListener('click', () => {
+	const name = inputName.value;
+	const shortDescription = inputShortDescription.value;
+
+	const longDescription = inputLongDescription.value;
+
+	const character = {
+		name,
+		shortDescription,
+		description: longDescription,
+		image,
+	};
+
+	addCharacter(character);
+});
+
+inputImage.addEventListener('change', (e) => {
+	const file = e.target.files[0];
+	const reader = new FileReader();
+	reader.onloadend = () => {
+		image = reader.result.replace('data:', '').replace(/^.+,/, '');
+	};
+	reader.readAsDataURL(file);
+});
+
+//Function that makes the fetch request
 const addCharacter = async (character) => {
 	try {
 		const res = await fetch(base_url, {
@@ -16,39 +43,14 @@ const addCharacter = async (character) => {
 			},
 			body: JSON.stringify(character),
 		});
-
-		const data = await res.json();
-		console.log('server response', data);
+		Swal.fire('Nice!', 'Character added', 'success');
 	} catch (error) {
+		Swal.fire(
+			'Oh no!!',
+			'Something when wrong, please try again later',
+			'error'
+		);
+
 		console.log(error);
 	}
 };
-
-const init = () => {
-	button.addEventListener('click', () => {
-		const name = inputName.value;
-		const shortDescription = inputShortDescription.value;
-
-		console.log(shortDescription);
-
-		const longDescription = inputLongDescription.value;
-		console.log(longDescription);
-
-		const image = inputImage.files[0];
-
-		const formData = new FormData();
-
-		formData.append('image', image);
-
-		const character = {
-			name,
-			shortDescription,
-			description: longDescription,
-			// image: formData,
-		};
-
-		addCharacter(character);
-	});
-};
-
-init();

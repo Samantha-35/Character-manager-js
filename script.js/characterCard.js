@@ -10,7 +10,7 @@ const init = async () => {
 		const clone = template.cloneNode(true).content;
 		const image = clone.querySelector('img');
 
-		image.src = hero.image;
+		image.src = `data:image/*;base64,${hero.image}`;
 
 		const h4 = clone.querySelector('h4');
 		h4.innerHTML = hero.name;
