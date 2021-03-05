@@ -7,7 +7,7 @@ export const getCharacters = async () => {
 
 		const filteredCharacters = characters.slice(0, 4);
 
-		return filteredCharacters;
+		return characters;
 	} catch (error) {
 		console.log(error);
 	}
