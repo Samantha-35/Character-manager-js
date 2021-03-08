@@ -63,7 +63,7 @@
 
                     <!-- <button type="submit">btn</button> -->
                     <!-- <div><input type="file" class="inpuTypeFileModal" id="image-input"></input></div> -->
-                    <div><input type="submit" class="ChooseImage"></div>
+                    <div><input id='input-file' type="file" class="ChooseImage"></div>
                     <!-- <label>
                         <input type="checkbox" checked="checked" name="remember" class="checkbox">
                     </label> -->
@@ -74,8 +74,8 @@
                 </div>
 
                 <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                        class="cancelbtn">Cancel</button>
+                    <button type="button" id="delete-button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Delete</button>
                     <button id="button-modal" type="button" onclick="document.getElementById('id01').style.display='none'"
                         class="cancelbtn">Save</button>
                 </div>
@@ -84,6 +84,10 @@
     </main>
 
     <footer></footer>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+    <script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
     <script src="./script.js/characterCard.js" type="module"></script>
     <script src="./script.js/getCharacters.js" type="module"></script>
     <script src="./script.js/updateCharacter.js" type="module"></script>

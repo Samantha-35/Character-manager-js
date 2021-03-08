@@ -1,3 +1,4 @@
+import { deleteCharacter } from './deleteCharacter.js';
 import { getCharacters } from './getCharacters.js';
 import { updateCharacter } from './updateCharacter.js';
 
@@ -26,12 +27,14 @@ const init = async () => {
 			const button = clone.querySelector('button');
 			button.setAttribute('id', `button-${i}`);
 
+			const heroId = hero.id;
+
+			// const heroImage = hero.img;
+
 			//button to open the modal
 			button.addEventListener('click', () => {
 				let inputNameModal = document.getElementById('name-modal');
 				inputNameModal.value = hero.name;
-
-				// let image= document.
 
 				let inputShortDescriptionModal = document.getElementById(
 					'short-description-modal'
@@ -44,8 +47,6 @@ const init = async () => {
 				);
 				inputLongDescriptionModal.value = hero.description;
 
-				// let ino
-
 				const modalButton = document.getElementById('button-modal');
 
 				//Listener inside the modal for save button
@@ -55,10 +56,19 @@ const init = async () => {
 					const description = inputLongDescriptionModal.value;
 
 					const updatedCharacter = {
+						...hero,
 						name,
 						shortDescription,
 						description,
 					};
+
+					updateCharacter(updatedCharacter, heroId);
+				});
+
+				const deleteButton = document.getElementById('delete-button');
+
+				deleteButton.addEventListener('click', () => {
+					deleteCharacter(heroId);
 				});
 			});
 

@@ -6,6 +6,7 @@ export const getCharacters = async () => {
 		const characters = await res.json();
 
 		const filteredCharacters = characters.slice(0, 4);
+		console.log(filteredCharacters);
 
 		return characters;
 	} catch (error) {
