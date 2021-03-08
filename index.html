@@ -32,7 +32,7 @@
                         </div>
                         <div class="buttons">
                             <!-- <button class="btn" class="buttonOne">Delete</button> -->
-                            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"
+                            <button   onclick="document.getElementById('id01').style.display='block'" style="width:auto;"
                                 class="btn buttonOne">Edit</button>
                         </div>
                     </div>
@@ -41,7 +41,6 @@
             </div>
         </template>
         <div class="container" id='target'></div>
-
 
         <div id="id01" class="modal">
 
@@ -54,13 +53,13 @@
 
                 <div class="container">
                     <label for="uname"><b>Name</b></label>
-                    <input type="text" class="borderInput" placeholder="Enter a name" name="uname" required>
+                    <input type="text" id='name-modal' class="borderInput" placeholder="Enter a name" name="uname" required>
 
                     <label for="psw"><b>Short description</b></label>
-                    <input type="text" placeholder="Enter a short description" name="psw" required>
+                    <input type="text" id='short-description-modal' placeholder="Enter a short description" name="psw" required>
 
                     <label for="psw"><b>Long description</b></label>
-                    <input type="text" placeholder="Enter a longer description" name="psw" required>
+                    <textarea type="text" id='long-description-modal' placeholder="Enter a longer description" name="psw" required></textarea>
 
                     <!-- <button type="submit">btn</button> -->
                     <!-- <div><input type="file" class="inpuTypeFileModal" id="image-input"></input></div> -->
@@ -77,7 +76,7 @@
                 <div class="container" style="background-color:#f1f1f1">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'"
                         class="cancelbtn">Cancel</button>
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    <button id="button-modal" type="button" onclick="document.getElementById('id01').style.display='none'"
                         class="cancelbtn">Save</button>
                 </div>
             </form>
@@ -87,6 +86,7 @@
     <footer></footer>
     <script src="./script.js/characterCard.js" type="module"></script>
     <script src="./script.js/getCharacters.js" type="module"></script>
+    <script src="./script.js/updateCharacter.js" type="module"></script>
 </body>
 
 </html>
