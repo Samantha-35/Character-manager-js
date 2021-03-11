@@ -1,5 +1,4 @@
 # Character-manager-js
-Using JS best practices.
 
 ### This challenge is intended to help us use JS best practices.
 
